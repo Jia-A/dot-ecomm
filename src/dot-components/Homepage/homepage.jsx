@@ -1,7 +1,7 @@
-
 import "../../public-css/navbar.css";
-import "../../public-css/root.css";
+
 import "./homepage.css";
+import "../../public-css/root.css";
 
 
 const Homepage = () => {
@@ -10,7 +10,7 @@ const Homepage = () => {
       <div class="nav-con">
         <nav class="nav-bar">
             <div>
-                <h2 class="website-name"><a href="./index.html" class="link-style link-color-primary"> D<img src="../../../public/images/dot.png" class="dot-img"/>T Store</a></h2>
+                <h2 class="website-name"><a href="./index.html" class="link-style link-color-primary"> D<img src="./images/dot.png" class="dot-img"/>T Store</a></h2>
 
                 <p class="sm-txt"><i>Everything ends with a dot.</i></p>
             </div>
@@ -40,46 +40,46 @@ const Homepage = () => {
     <div class="author-flex">
         <div class="authors">
             <div class="img-cont">
-                <img src="./assets/all-products.jpg" class="round-img" alt="all-product-img"/>
+                <img src="./images/all-products.jpg" class="round-img" alt="all-product-img"/>
                 <button class="small-text btn primary-btn"><a href="./site-pages/all_products/products.html" class="link-style link-color">All Products </a></button>
             </div>
             <div class="img-cont">
-                <img src="./assets/john-green.jpg" class="round-img" alt="john-green-img"/>
+                <img src="./images/john-green.jpg" class="round-img" alt="john-green-img"/>
                 <button class="small-text btn secondary-btn-border">John Green</button>
             </div>
             <div class="img-cont">
-                <img src="./assets/paula-hawkins.jpg" class="round-img" alt="paula-hawkins-img"/>
+                <img src="./images/paula-hawkins.jpg" class="round-img" alt="paula-hawkins-img"/>
                 <button class="small-text btn secondary-btn-border">Paula Hawkins</button>
             </div>
             <div class="img-cont">
-                <img src="./assets/jkr.jpg" class="round-img" alt="jkr-img"/>
+                <img src="./images/jkr.jpg" class="round-img" alt="jkr-img"/>
                 <button class="small-text btn secondary-btn-border">JK Rowling</button>
             </div>
             <div class="img-cont">
-                <img src="./assets/murakami.jpg" class="round-img" alt="haruki-murakami-img"/>
+                <img src="./images/murakami.jpg" class="round-img" alt="haruki-murakami-img"/>
                 <button class="small-text btn secondary-btn-border">Haruki Murakami</button>
             </div>
             <div class="img-cont">
-                <img src="./assets/khaled.jpg" class="round-img" alt="khaled-hosseini-img"/>
+                <img src="./images/khaled.jpg" class="round-img" alt="khaled-hosseini-img"/>
                 <button class="small-text btn secondary-btn-border">Khaled Hosseini</button>
             </div>
             <div class="img-cont">
-                <img src="./assets/nicholas.jpg" class="round-img" alt="nicholas-sparks-img"/>
+                <img src="./images/nicholas.jpg" class="round-img" alt="nicholas-sparks-img"/>
                 <button class="small-text btn secondary-btn-border">Nicholas Sparks</button>
             </div>
             <div class="img-cont">
-                <img src="./assets/colleen-hoover.png" class="round-img" alt="colleen-hoover-img"/>
+                <img src="./images/colleen-hoover.png" class="round-img" alt="colleen-hoover-img"/>
                 <button class="small-text btn secondary-btn-border">Colleen Hover</button>
             </div>
         </div>
     </div>
     <div class="hero">
-        <img src="../../../public/images/hero-img.jpg" class="responsive-img" alt="hero-img"/>
+        <img src="./images/hero-img.jpg" class="responsive-img" alt="hero-img"/>
     </div>
     <div class="cards-cont">
         <article class="complete-card">
             <div class="horizontal-content">
-                <img src="./assets/new-thriller.jpg" alt="thriller arrival" class="card-image hori-img"/>
+                <img src="./images/new-thriller.jpg" alt="thriller arrival" class="card-image hori-img"/>
                 <div class="main-info-cont">
                     <p class="sm-txt new-ar">New arrival</p>
                     <h3 class="info-head">New Thriller</h3>
@@ -91,7 +91,7 @@ const Homepage = () => {
         </article>
         <article class="complete-card">
             <div class="horizontal-content">
-                <img src="./assets/new-rom-com.jpg" alt="rom-com arrival" class="card-image hori-img"/>
+                <img src="./images/new-rom-com.jpg" alt="rom-com arrival" class="card-image hori-img"/>
                 <div class="main-info-cont">
                     <p class="sm-txt new-ar">New arrival</p>
                     <h3 class="info-head">New Rom-Com</h3>
