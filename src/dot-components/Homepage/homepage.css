@@ -1,0 +1,78 @@
+@import url("https://techtonic-ui.netlify.app/styles.css");
+
+.body-container{
+    display: flex ;
+    flex-direction: column;
+}
+.authors {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1.875rem;
+    border-radius: var(--border-radius);
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+}
+
+.round-img {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.img-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondary-btn-border {
+
+    background-color: transparent;
+}
+
+.hero {
+    margin-bottom: 1.25rem;
+}
+
+.responsive-img {
+    height: 28.125rem;
+}
+
+.cards-cont {
+    display: flex;
+    margin: 1.25rem;
+    gap: 6.25rem;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.info-head{
+    color: var(--primary-color);
+}
+.new-ar{
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.sm-txt{
+    color: var(--font-color);
+}
+.read-btn{
+    padding: 0px;
+    margin: 15px 0px 0px 0px;
+    background-color: transparent;
+}
+.complete-card {
+    max-width: 40rem;
+    background-color: #E1F0C4;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.hori-img, .main-info-cont{
+    height: 75%;
+    padding: 1.5rem;
+}
+.complete-card{
+    padding-bottom: 0px;
+}

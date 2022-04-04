@@ -1,0 +1,40 @@
+.form-main{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+.form-container{
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    display: flex;
+
+    text-align: center;
+    padding: 20px;
+
+
+    text-align: center;
+    padding: 1.25rem;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+
+
+}
+.form-head{
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.submit-btn{
+    width: 85%;
+}
+.new-ac{
+    text-decoration: underline;
+}
+.label-inp{
+    margin-bottom: 1px;
+}

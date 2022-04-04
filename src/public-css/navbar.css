@@ -1,0 +1,53 @@
+.nav-con{
+    margin: 0;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.website-name{
+    margin-bottom: 3px;
+}
+.dot-img{
+    width: 15px;
+    height: 15px;
+}
+.icon{
+    color: var(--primary-color);
+}
+.website-name{
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.btn-div{
+    display: inline;
+}
+.nav-btn{
+    display: flex;
+    flex-direction: row;
+}
+.icon-only-btn{
+    position:relative;
+}
+.real-badge{
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin: 0.875rem;
+    border-radius: 50%;
+    height: 0.8125rem;
+    width: 0.8125rem;
+    background-color: var(--alert-color);
+    color: var(--whitesmoke-color);
+    font-size: 0.7rem;
+    text-align: center;
+}
+.btn-badge{
+    padding: 0px;
+    position: relative;
+}
+
+
