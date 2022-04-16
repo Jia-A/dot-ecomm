@@ -32,6 +32,9 @@
 .icon-only-btn{
     position:relative;
 }
+.btn{
+    cursor:pointer;
+}
 .real-badge{
     top: 0;
     right: 0;
