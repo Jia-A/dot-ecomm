@@ -1,41 +1,44 @@
-@import url("https://techtonic-ui.netlify.app/styles.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300&display=swap');
-
+@import url(../../public-css/root.css);
 body{
     font-family: "Montserrat", sans-serif;
-}
 
+}
 
 .body-container{
     display: flex ;
     flex-direction: column;
+    background-color: var(--whitesmoke-color);
 }
 .authors {
     display: flex;
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 4rem;
     align-items: center;
     justify-content: center;
     padding: 1.875rem;
     border-radius: var(--border-radius);
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin: 3.125rem;
 
 }
 
 .round-img {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 9rem;
+    height: 9rem;
 }
 
 .img-cont {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1.25rem;
 }
-
-.secondary-btn-border {
-
+.primary-btn {
+    padding: 10px;
+}
+.primary-btn-border {
+    padding: 10px;
     background-color: transparent;
 }
 
@@ -75,7 +78,7 @@ body{
     background-color: #E1F0C4;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
 }
-.hori-img, .main-info-cont{
+.hori-img{
     height: 75%;
     padding: 1.5rem;
 }
