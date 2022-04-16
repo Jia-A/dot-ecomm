@@ -12,8 +12,8 @@
     margin-bottom: 3px;
 }
 .dot-img{
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
 }
 .icon{
     color: var(--primary-color);
