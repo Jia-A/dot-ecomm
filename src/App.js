@@ -1,11 +1,15 @@
 import "./App.css";
-import { Homepage } from "./dot-components/Homepage/homepage";
+
+import { Cart } from "./dot-components/Cart/cart";
+
 
 
 function App() {
   return (
     <div className="App">
-      <Homepage/>
+
+      <Cart/>
+
     </div>
   );
 }
