@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+.flex-prop{
+    display: flex;
+    flex-direction: column;
+}
+.align-justify-center{
+    align-items: center;
+    justify-content: center;
+}
+.margin-30{
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+.primary-btn, 
+.primary-btn-border,
+.secondary-btn-border
+{
+    padding: 5px;
+}
+.button{
+    background-color: transparent;
+}
+.link-style{
+    text-decoration: none;
+}
+.link-color{
+    color: var(--whitesmoke-color);
+}
+.link-color-primary{
+    color: var(--primary-color);
+}

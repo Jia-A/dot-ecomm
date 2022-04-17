@@ -1,0 +1,35 @@
+.main-foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    background-color: #0c172e;
+    padding: 10px;
+
+}
+.fab,
+.quote, 
+.copyright{
+    color: var(--whitesmoke-color)
+}
+.fab{
+    cursor: pointer;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0/ 80%);
+    border-radius: 100%;
+    z-index: 1;
+}
+.quote{
+    font-size: larger;
+    font-weight: 200;
+    font-style: italic;
+    text-decoration: underline;
+}
+.quote,
+.copyright{
+    margin: 8px;
+}
+.foot-links{
+    display: flex;
+    gap: 1.25rem;
+}

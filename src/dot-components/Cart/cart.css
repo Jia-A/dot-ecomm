@@ -1,0 +1,98 @@
+@import url("https://techtonic-ui.netlify.app/styles.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300&display=swap');
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.cart-container{
+    display: flex;
+
+}
+.cart-cards-container{
+    width: 75%;
+    gap: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+
+.bill{
+    display: flex;
+    float: right;
+    width: 25%;
+    height: 100%;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    padding: var(--content-padding);
+    margin-top: 1.875rem;
+    margin-right: 1.25rem;
+}
+
+.cart-head{
+    font-weight: 500;
+}
+.hori-img{
+    padding: 0.9375rem;
+    width: 15.625rem;
+    height: 16.875rem;
+}
+.discount{
+    text-decoration: line-through;
+    color: gray;
+}
+.discount-per{
+    color: var(--good-color);
+}
+.cart-card{
+    max-width: 90%;
+}
+.main-info-cont{
+    text-align: center;
+    margin: 0.9375rem 0.9375rem;
+}
+.quantity-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.quantity-head{
+    margin-right: 0px;
+    padding-right: 0px;
+}
+.quantity-btn{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 100%
+}
+.inc:hover{
+    background-color: var(--good-color);
+}
+.dec:hover{
+    background-color: var(--warning-color);
+}
+.quantity-btn:hover{
+    cursor: pointer;;
+}
+.product-quantity{
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 0px 5px;
+}
+.fa-plus, .fa-minus{
+    color: black;
+}
+.rem-btn, .read-btn{
+    padding: 5px;
+    
+}
+
+.bill-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price-head, 
+.delivery,
+.total-am{
+    border-bottom: 1px solid var(--primary-color);
+}
