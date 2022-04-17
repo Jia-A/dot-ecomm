@@ -1,17 +1,19 @@
+
+import "./index.css";
+import {Products}  from "./dot-components/Product-listing/product"
+
 import "./App.css";
 
-import { Cart } from "./dot-components/Cart/cart";
 
 
 
-function App() {
+
+
+
+export default function App() {
   return (
     <div className="App">
-
-      <Cart/>
-
+      <Products/>
     </div>
   );
 }
-
-export default App;
