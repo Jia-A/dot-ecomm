@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300&display=swap');
 
 body{
@@ -6,6 +7,7 @@ body{
 
 .cart-container{
     display: flex;
+
     margin-right: 50px;
 
 }
@@ -18,13 +20,14 @@ body{
 .bill{
     display: flex;
     float: right;
+
     width: 30%;
+
     height: 100%;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
     padding: var(--content-padding);
     margin-top: 1.875rem;
     margin-right: 1.25rem;
-
 }
 
 .cart-head{
@@ -42,15 +45,17 @@ body{
 .discount-per{
     color: var(--good-color);
 }
+
 .discount-am{
     border-bottom: 1px solid var(--primary-color);
 }
+
 .cart-card{
     max-width: 90%;
 }
 .main-info-cont{
     text-align: center;
-    /* margin: 10px; */
+
 }
 .quantity-cont{
     display: flex;
@@ -103,3 +108,4 @@ body{
 .fa-star{
     color: rgb(236, 183, 47);
 }
+

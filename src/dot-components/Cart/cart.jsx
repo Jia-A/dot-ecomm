@@ -1,4 +1,3 @@
-
 import "./cart.css"
 import "../../public-css/root.css";
 import { Link } from "react-router-dom";
@@ -83,3 +82,5 @@ const Cart = () => {
 };
 
 export { Cart };
+
+
