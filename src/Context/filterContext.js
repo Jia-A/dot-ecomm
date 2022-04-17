@@ -1,8 +1,8 @@
 import {
     createContext,
     useContext,
-    useReducer, 
-    useState, 
+    useReducer,
+    useState,
     useEffect
 } from "react";
 
@@ -20,23 +20,24 @@ const initVal = {
 
 const FilterContext = createContext();
 
-const FilterProvider = ({children}) =>{
+const FilterProvider = ({
+    children
+}) => {
     const [products, setProducts] = useState([]);
     const [filterState, filterDispatch] = useReducer(filterFunc, initVal);
-    useEffect(()=>{
+    useEffect(() => {
         axios.get("/api/products")
-        .then(response =>{
-            setProducts(response.data.products)
-        })
+            .then(response => {
+                setProducts(response.data.products)
+            })
     }, []);
-    return ( 
-        <FilterContext.Provider value = {
+    return ( <FilterContext.Provider value = {
             {
                 filterState,
-                filterDispatch, 
+                filterDispatch,
                 products
             }
-        }> {
+        } > {
             children
         } </FilterContext.Provider>
     );

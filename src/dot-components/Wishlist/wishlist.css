@@ -1,56 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300&display=swap');
-
-body{
-    font-family: "Montserrat", sans-serif;
-}
-.wishlist-container{
+.wishlist-container {
     gap: 40px;
     margin: 2.5rem 1rem;
 }
-.main-info-cont, 
+
+.main-info-cont,
 .sub-info-cont,
-.footer{
+.footer {
     text-align: center;
 }
-.wishlist-head{
+
+.wishlist-head {
     font-weight: 500;
 }
-.wishlist-cards{
+
+.wishlist-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--container-gap);
 }
-.complete-card{
+
+.complete-card {
     /* max-width: 19rem; */
     background-color: #e9ebf1;
 }
-.card-image{
+
+.card-image {
     padding: 0.9375rem;
     width: 15.625rem;
     height: 16.875rem;
     align-self: center;
 }
 
-.wish-icon{
+.wish-icon {
     color: var(--warning-color);
 }
-.wish-icon:hover{
+
+.wish-icon:hover {
     color: var(--alert-color);
-    
+
 }
-.info-head{
+
+.info-head {
     font-weight: 500;
 }
-.button{
+
+.button {
     text-decoration: underline;
 }
-.button:hover{
+
+.button:hover {
     background-color: transparent;
 }
-.footer{
+
+.footer {
     justify-content: space-around;
 }
-.fa-star{
+
+.fa-star {
     color: rgb(236, 183, 47);
 }
