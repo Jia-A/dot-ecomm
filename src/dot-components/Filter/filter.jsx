@@ -1,4 +1,4 @@
-// import "./filter.css"
+
 import { useFilter } from "../../Context/filterContext";
 import "../Product-listing/product.css"
 
@@ -91,4 +91,6 @@ const Filter = () => {
     );
 }
 
+
 export {Filter};
+

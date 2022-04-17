@@ -8,7 +8,6 @@ import {
 
 import axios from "axios";
 
-
 const initVal = {
     categoryFil: [],
     priceRangeFil: 500,
@@ -49,7 +48,6 @@ export {
     useFilter,
     FilterProvider
 };
-
 
 
 const filterFunc = (filterState, action) => {
@@ -119,6 +117,3 @@ const filterFunc = (filterState, action) => {
             return filterState;
     }
 }
-
-
-
