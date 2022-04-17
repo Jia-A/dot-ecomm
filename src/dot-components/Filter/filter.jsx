@@ -1,5 +1,7 @@
+
 import { useFilter } from "../../Context/filterContext";
 import "../Product-listing/product.css"
+
 
 const Filter = () => {
     const { filterState, filterDispatch } = useFilter();
@@ -89,4 +91,6 @@ const Filter = () => {
     );
 }
 
+
 export {Filter};
+

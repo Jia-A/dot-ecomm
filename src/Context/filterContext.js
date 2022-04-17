@@ -117,6 +117,3 @@ const filterFunc = (filterState, action) => {
             return filterState;
     }
 }
-
-
-

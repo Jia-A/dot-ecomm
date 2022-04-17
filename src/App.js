@@ -4,6 +4,9 @@ import {Products}  from "./dot-components/Product-listing/product"
 
 import "./App.css";
 
+import {Homepage}  from "./dot-components/Homepage/homepage";
+
+
 
 
 
@@ -13,7 +16,9 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <Products/>
+
+      <Homepage/>
+
     </div>
   );
 }

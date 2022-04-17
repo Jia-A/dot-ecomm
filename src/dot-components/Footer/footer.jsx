@@ -16,4 +16,6 @@ const Footer = () =>{
     );
 }
 
+
 export {Footer}
+
