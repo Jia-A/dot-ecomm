@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300&display=swap');
 @import url(../../public-css/root.css);
 body{
     font-family: "Montserrat", sans-serif;
 
-}
+} */
 
-.body-container{
-    display: flex ;
+.body-container {
+    display: flex;
     flex-direction: column;
     background-color: var(--whitesmoke-color);
 }
+
 .authors {
     display: flex;
     flex-direction: row;
@@ -34,9 +35,11 @@ body{
     align-items: center;
     gap: 1.25rem;
 }
+
 .primary-btn {
     padding: 10px;
 }
+
 .primary-btn-border {
     padding: 10px;
     background-color: transparent;
@@ -56,32 +59,39 @@ body{
     gap: 6.25rem;
     justify-content: space-around;
     align-items: center;
-    
+
 }
-.info-head{
+
+.info-head {
     color: var(--primary-color);
 }
-.new-ar{
+
+.new-ar {
     margin-bottom: 10px;
     text-decoration: underline;
 }
-.sm-txt{
+
+.sm-txt {
     color: var(--font-color);
 }
-.read-btn{
+
+.read-btn {
     padding: 0px;
     margin: 15px 0px 0px 0px;
     background-color: transparent;
 }
+
 .complete-card {
     max-width: 40rem;
     background-color: #E1F0C4;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
 }
-.hori-img{
+
+.hori-img {
     height: 75%;
     padding: 1.5rem;
 }
-.complete-card{
+
+.complete-card {
     padding-bottom: 0px;
 }

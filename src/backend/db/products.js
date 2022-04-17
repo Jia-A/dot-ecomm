@@ -101,7 +101,7 @@ export const products = [
     title: "Layla",
     author: "Colleen Hoover",
     price: 300,
-    categoryName: "Horror",
+    categoryName: "Rom-Com",
     image : "./images/layla.jpg",
     quantity : 1,
     ratings : 2
@@ -125,6 +125,66 @@ export const products = [
     image : "./images/splendid-suns.jpg",
     quantity : 1,
     ratings : 5
+  },
+  {
+    _id: uuid(),
+    title: "IT",
+    author: "Stephen King",
+    price: 350,
+    categoryName: "Horror",
+    image : "./images/IT.jpg",
+    quantity : 1,
+    ratings : 4
+  },
+  {
+    _id: uuid(),
+    title: "The Green Mile",
+    author: "Stephen King",
+    price: 300,
+    categoryName: "Horror",
+    image : "./images/green-mile.jpg",
+    quantity : 1,
+    ratings : 3
+  },
+  {
+    _id: uuid(),
+    title: "The Outsider",
+    author: "Stephen King",
+    price: 350,
+    categoryName: "Horror",
+    image : "./images/outsider.jpg",
+    quantity : 1,
+    ratings : 3
+  },
+  {
+    _id: uuid(),
+    title: "Harry Potter Set",
+    author: "J.K. Rowling",
+    price: 500,
+    categoryName: "Fantasy",
+    image : "./images/harry-potter.jpg",
+    quantity : 1,
+    ratings : 5
+  },
+  {
+    _id: uuid(),
+    title: "Game of Thrones Set",
+    author: "George R.R. Martin",
+    price: 500,
+    categoryName: "Fantasy",
+    image : "./images/got.jpg",
+    quantity : 1,
+    ratings : 3
+  },
+  {
+    _id: uuid(),
+    title: "Lord of the Rings Set",
+    author: "J.R.R. Tolkien",
+    price: 500,
+    categoryName: "Fantasy",
+    image : "./images/lotr.jpg",
+    quantity : 1,
+    ratings : 3
   },
   
 ];

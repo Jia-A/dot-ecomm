@@ -1,41 +1,50 @@
-.nav-con{
+.nav-con {
     margin: 0;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
 }
-.nav-bar{
+
+.nav-bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.website-name{
+.website-name {
     margin-bottom: 3px;
 }
-.dot-img{
+
+.dot-img {
     width: 0.9375rem;
     height: 0.9375rem;
 }
-.icon{
+
+.icon {
     color: var(--primary-color);
 }
-.website-name{
+
+.website-name {
     font-weight: 500;
     color: var(--primary-color);
 }
-.btn-div{
+
+.btn-div {
     display: inline;
 }
-.nav-btn{
+
+.nav-btn {
     display: flex;
     flex-direction: row;
 }
-.icon-only-btn{
-    position:relative;
+
+.icon-only-btn {
+    position: relative;
 }
-.btn{
-    cursor:pointer;
+
+.btn {
+    cursor: pointer;
 }
-.real-badge{
+
+.real-badge {
     top: 0;
     right: 0;
     position: absolute;
@@ -48,9 +57,8 @@
     font-size: 0.7rem;
     text-align: center;
 }
-.btn-badge{
+
+.btn-badge {
     padding: 0px;
     position: relative;
 }
-
-
