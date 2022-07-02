@@ -16,17 +16,10 @@ return (
                 </Link>
                 <p class="sm-txt"><i>Everything ends with a dot.</i></p>
             </div>
-
-            <div class="box">
-                <input type="text" placeholder="Search" class="search-box input" />
-            </div>
             <div class="nav-btn">
                 <Link to="/login" className="link-style link-color">
                 <button className="btn secondary-btn">Login</button>
                 </Link>
-                <div class="btn-badge">
-                    <button class="btn icon-only-btn"><i class="far fa-user icon"></i></button>
-                </div>
                 <div class="btn-badge">
                     <Link to="/wishlist" className="link-style">
                     <button class="btn icon-only-btn"><i class="far fa-heart icon"></i></button>

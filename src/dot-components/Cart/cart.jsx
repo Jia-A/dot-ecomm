@@ -1,9 +1,9 @@
-import "./cart.css"
 import "../../public-css/root.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../Context/cartContext"
 import { useWishlist } from "../../Context/wishlistContext";
 import { Navbar } from "../Navbar/navbar";
+import "./cart.css"
 
 const Cart = () => {
 
@@ -17,19 +17,21 @@ const finalPrice = totalPrice-discountPrice;
 return (
 <div className="App">
     <Navbar />
+    <h3 class="cart-head">Your cart <span class="cart-quant">({cartState.cart.length})</span></h3>
     <div class="cart-container margin-30">
-        <main class="cart-cards-container flex-prop align-justify-center">
-            <h3 class="cart-head">Your cart <span class="cart-quant">({cartState.cart.length})</span></h3>
+    
+        <main class="cart-cards-container align-justify-center">
+            
             {cartState.cart.map((item) =>
-            <article class="complete-card cart-card">
-                <div class="horizontal-content">
-                    <img src={item.image} class="card-image hori-img" />
-                    <div class="main-info-cont align-justify-center">
-                        <h3 class="info-head">{item.title}</h3>
-                        <p class="sm-txt new-ar">{item.author}</p>
-                        <p class="sub-info">Rs.{item.price}</p>
-                        <p className="sub-info">{item.ratings}<span><i class="fas fa-star"></i></span></p>
-                        <div class="quantity-cont align-justify-center">
+            <article class="complete-card">
+            <img src={item.image} alt="" class="card-image" />
+            <div class="main-info-cont">
+                <h3 class="info-head">{item.title}</h3>
+                <p class="sm-txt">{item.author}</p>
+                <p class="item-price">Rs. {item.price} <span className="span-info">{item.ratings}<span><i class="fas fa-star"></i></span></span></p>
+                
+            </div>
+            <div class="quantity-cont align-justify-center">
                             <p class=" quantity-head">Quantity :</p>
                             <button class="quantity-btn inc" onClick={()=> cartDispatch({type : "Increase_quantity",
                                 payload : item})}><i class="fal fa-plus"></i></button>
@@ -37,25 +39,27 @@ return (
                             <button class="quantity-btn dec" onClick={()=> cartDispatch({type : "Decrease_quantity",
                                 payload : item})}><i class="fal fa-minus"></i></button>
                         </div>
-                        <div class="flex-prop">
+            {/* <div class="sub-info-cont">
+
+
+            </div> */}
+            <div class="flex-prop align-justify-center">
                             <button class="btn secondary-btn rem-btn" onClick={()=>cartDispatch({type :
                                 "Remove_from_cart", payload : item})}>Remove from Cart</button>
                             {wishState.wish.find((product) => product._id === item._id) ?
                             <Link to="/wishlist">
-                            <button class="button read-btn">Go to Wishlist</button>
+                            <button class="button read-btn wl-btn">Go to Wishlist</button>
                             </Link> :
-                            <button class="button read-btn" onClick={()=>wishDispatch({type : "Add_to_wishlist", payload
+                            <button class="button read-btn wl-btn" onClick={()=>wishDispatch({type : "Add_to_wishlist", payload
                                 : item})}>Add to wishlist</button>
                             }
 
                         </div>
-                    </div>
-                </div>
-
-            </article>
+        </article>
+            
             )}
         </main>
-        <div class="bill flex-prop">
+        <div class="bill">
             <div class="flex-prop">
                 <h3 class="price-head">Price Details</h3>
                 <hr />
@@ -86,3 +90,36 @@ return (
 };
 
 export { Cart };
+
+{/* <article class="complete-card cart-card">
+                <div class="horizontal-content">
+                    <img src={item.image} class="card-image hori-img" />
+                    <div class="main-info-cont align-justify-center">
+                        <h3 class="info-head">{item.title}</h3>
+                        <p class="sm-txt new-ar">{item.author}</p>
+                        <p class="sub-info">Rs.{item.price}</p>
+                        <p className="sub-info">{item.ratings}<span><i class="fas fa-star"></i></span></p>
+                        <div class="quantity-cont align-justify-center">
+                            <p class=" quantity-head">Quantity :</p>
+                            <button class="quantity-btn inc" onClick={()=> cartDispatch({type : "Increase_quantity",
+                                payload : item})}><i class="fal fa-plus"></i></button>
+                            <div class="product-quantity">{item.quantity}</div>
+                            <button class="quantity-btn dec" onClick={()=> cartDispatch({type : "Decrease_quantity",
+                                payload : item})}><i class="fal fa-minus"></i></button>
+                        </div>
+                        <div class="flex-prop">
+                            <button class="btn secondary-btn rem-btn" onClick={()=>cartDispatch({type :
+                                "Remove_from_cart", payload : item})}>Remove from Cart</button>
+                            {wishState.wish.find((product) => product._id === item._id) ?
+                            <Link to="/wishlist">
+                            <button class="button read-btn">Go to Wishlist</button>
+                            </Link> :
+                            <button class="button read-btn" onClick={()=>wishDispatch({type : "Add_to_wishlist", payload
+                                : item})}>Add to wishlist</button>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+
+            </article> */}
