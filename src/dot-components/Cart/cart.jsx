@@ -1,16 +1,34 @@
 import "./cart.css"
 import "../../public-css/root.css";
 import { Link } from "react-router-dom";
-import { useCart } from "../../Context/cartContext"
-import { useWishlist } from "../../Context/wishlistContext";
+import { getCartVideos } from "../../redux/reducers/cart/cartSlice";
+// import { useCart } from "../../Context/cartContext"
+// import { useWishlist } from "../../Context/wishlistContext";
 import { Navbar } from "../Navbar/navbar";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 const Cart = () => {
 
-const { cartState, cartDispatch } = useCart();
-const { wishState, wishDispatch } = useWishlist();
+    const cartDispatch = useDispatch();
+    const cartProducts = useSelector((state)=>state.cart.cart)
+    const isUserLoggedIn = useSelector((state) => state.auth.isUserLoggedin);
 
-const totalPrice = cartState.cart.reduce((acc, curr) => acc + Number(curr.price) * Number(curr.quantity), 0 );
+    const wishlistDispatch = useDispatch();
+    
+
+    useEffect(()=>{
+        cartDispatch(getCartVideos)
+    }, [cartDispatch]);
+
+   
+
+
+
+// const { cartState, cartDispatch } = useCart();
+// const { wishState, wishDispatch } = useWishlist();
+
+const totalPrice = cartProducts.reduce((acc, curr) => acc + Number(curr.price) * Number(curr.quantity), 0 );
 const discountPrice = (10*totalPrice)/100;
 const finalPrice = totalPrice-discountPrice;
 
@@ -19,8 +37,8 @@ return (
     <Navbar />
     <div class="cart-container margin-30">
         <main class="cart-cards-container flex-prop align-justify-center">
-            <h3 class="cart-head">Your cart <span class="cart-quant">({cartState.cart.length})</span></h3>
-            {cartState.cart.map((item) =>
+            <h3 class="cart-head">Your cart <span class="cart-quant">({cartProducts.length})</span></h3>
+            {cartProducts.map((item) =>
             <article class="complete-card cart-card">
                 <div class="horizontal-content">
                     <img src={item.image} class="card-image hori-img" />
