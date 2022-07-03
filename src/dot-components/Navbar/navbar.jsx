@@ -2,10 +2,13 @@ import "../../public-css/navbar.css";
 import { Link } from "react-router-dom";
 import { useProduct } from "../../Context/productContext";
 import { useAuth } from "../../Context/authContext";
+import { useTheme } from "../../Context/themeContext";
 
 const Navbar = () =>{
 const { productState } = useProduct();
 const { token, logoutHandler } = useAuth();
+const { theme, setTheme } = useTheme();
+
 const { wishlist, cart } = productState;
 return (
 <div className="App">
@@ -32,6 +35,10 @@ return (
                     </Link>
                     <div class="real-badge">{cart.length}</div>
                 </div>
+                { theme === "light" ? 
+                (  <button className="btn icon-only-btn" onClick={()=> setTheme("dark")}><i class="fas fa-moon"></i></button> ) : 
+                (  <button className="btn icon-only-btn" onClick={()=> setTheme("light")}><i class="fas fa-sun"></i></button> 
+                ) }
                 { token ? ( 
                  <button className="btn icon-only-btn" onClick={()=>logoutHandler()}><i className="fas fa-sign-out-alt icon"></i></button>
                 ) : (
@@ -39,6 +46,7 @@ return (
                         <button className="btn icon-only-btn"><i className="fas fa-sign-in-alt icon"></i></button>
                     </Link>
                 ) }
+                
             </div>
         </nav>
     </div>

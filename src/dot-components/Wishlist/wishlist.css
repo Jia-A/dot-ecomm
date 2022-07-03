@@ -1,6 +1,6 @@
 .wishlist-container {
     gap: 40px;
-    margin: 2.5rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
 .main-info-cont,
@@ -11,6 +11,7 @@
 
 .wishlist-head {
     font-weight: 500;
+    color: var(--secondary-color);
 }
 
 .wishlist-cards {

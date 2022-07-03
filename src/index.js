@@ -8,6 +8,7 @@ import { render } from "react-dom";
 import { FilterProvider } from "./Context/filterContext";
 import { ProductProvider } from "./Context/productContext";
 import { AuthProvider } from "./Context/authContext";
+import { ThemeProvider } from "./Context/themeContext";
 
 
 // Call make Server
@@ -16,6 +17,7 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <ThemeProvider>
     <FilterProvider>
         <ProductProvider>
           <AuthProvider>
@@ -23,6 +25,7 @@ ReactDOM.render(
           </AuthProvider>
         </ProductProvider>
     </FilterProvider>
+    </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

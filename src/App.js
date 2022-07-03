@@ -6,14 +6,16 @@ import { Wishlist } from "./dot-components/Wishlist/wishlist";
 import { Login } from "./dot-components/Login/login";
 import { Signup } from "./dot-components/Signup/signup";
 import { PrivateRoute } from "./dot-components/private";
+import { useTheme } from './Context/themeContext';
 import { Toaster } from 'react-hot-toast';
 import "./App.css";
 
 
 
 function App() {
+  const { theme } = useTheme();
   return (
-    <div className="App">
+    <div className={`App ${theme === "dark" ? "dark-theme" : ""}`}>
       <Toaster/>
       <Routes>
         {/* Open Routes */}

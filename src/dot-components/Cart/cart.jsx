@@ -18,7 +18,7 @@ return (
 <div className="App">
     <Navbar />
     <h3 class="cart-head">Your cart <span class="cart-quant">({cart.length})</span></h3>
-    <div class="cart-container margin-30">
+    <div class="cart-container">
     
         <main class="cart-cards-container align-justify-center">
             
