@@ -32,7 +32,7 @@ const AuthProvider = ({
                 localStorage.setItem("user", JSON.stringify(response.data.foundUser));
                 setToken(response.data.encodedToken);
                 setUser(response.data.foundUser);
-                navigate("/")
+                navigate("/products")
             }
             toast.success("Login Successful")
         } catch (err) {
@@ -51,7 +51,7 @@ const AuthProvider = ({
                 localStorage.setItem("user", JSON.stringify(response.data.createdUser));
                 setToken(response.data.encodedToken);
                 setUser(response.data.createdUser)
-                navigate("/")
+                navigate("/products")
             }
             toast.success("Signup Successful")
         } catch (err) {
