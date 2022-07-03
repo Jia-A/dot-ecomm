@@ -1,44 +1,61 @@
-import "./signup.css"
-import "../../public-css/root.css";
-import "../../public-css/sign-login-auth.css"
-import { Link } from "react-router-dom";
-import { Navbar } from "../Navbar/navbar";
-
+import "../Login/login.css";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../Context/authContext";
+import { useState } from "react";
 const Signup = () =>{
+const { signupHandler } = useAuth();
+const [newUser, setNewUser ] = useState({fname : "", lname : "", email : "", password : ""})
+
+const signupForm = (event) =>{
+event.preventDefault();
+signupHandler(newUser);
+}
 return (
 <div className="App">
-    <Navbar />
-    <main class="form-main align-justify-center margin-30">
+    <main className="form-main sign">
+        <div className="form-container">
 
-        <div class="form-container align-justify-center">
-
-            <form action="" class="signup-form">
+            <form action="" className="signup-form" onSubmit={signupForm}>
                 <h2 class="form-head">SignUp Form</h2>
-                <label for="fname" class="label-inp">Firstname*</label>
-                <input type="text" class="input" id="fname" required autofocus />
-                <label for="lname" class="label-inp">Lastname</label>
-                <input type="text" class="input" id="lname" />
-                <label for="email" class="label-inp">Email address*</label>
-                <input type="text" class="email-id-input input" id="email" required />
-                <label for="password" class="label-inp">Password*</label>
-                <input type="password" class="input" id="password" required />
-                <label for="">
+                <fieldset>
+                    <legend for="fname" className="label-inp">Firstname*</legend>
+                    <input type="text" className="input" id="fname" placeholder="Billie" value={newUser.fname}
+                        onChange={(e)=> setNewUser({...newUser, fname : e.target.value})} required autofocus />
+                </fieldset>
+                <fieldset>
+                    <legend for="lname" className="label-inp">Lastname</legend>
+                    <input type="text" className="input" id="lname" placeholder="Jean" value={newUser.lname} onChange={(e)=>
+                    setNewUser({...newUser, lname : e.target.value})} required/>
+                </fieldset>
+                <fieldset>
+                    <legend for="email" className="label-inp">Email address*</legend>
+                    <input type="text" className="email-id-input input" id="email" placeholder="billiejean@gmail.com"
+                        required value={newUser.email} onChange={(e)=> setNewUser({...newUser, email : e.target.value})}
+                    />
+                </fieldset>
+                <fieldset>
+                    <legend for="password" className="label-inp">Password*</legend>
+                    <input type="password" className="input" placeholder="1234567" id="password" required
+                        value={newUser.password} onChange={(e)=> setNewUser({...newUser, password : e.target.value})} />
+                </fieldset>
+                <label for="" className="label-inp">
                     <input type="checkbox" id="t-c" required />
                     I accept all the terms and conditions.
                 </label>
-                <div>
-                    <Link to="/">
-                    <button class="submit-btn btn primary-btn">Signup</button>
+                <div className="btn-div">
+                    <button className="login-btn" type="submit">Signup</button>
+                    <Link to="/login" className="link-style">
+                    <button className="new-ac-btn"> Already have an account</button>
                     </Link>
                 </div>
-                <Link to="/login" className="link-style link-color-primary">
-                <button class="new-ac button read-btn"> Already have an account</button>
-                </Link>
+
+
+
             </form>
         </div>
     </main>
 </div>
 );
-};
+}
 
-export {Signup};
+export { Signup }

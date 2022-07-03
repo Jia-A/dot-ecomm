@@ -1,11 +1,12 @@
 import "../../public-css/navbar.css";
 import { Link } from "react-router-dom";
-import { useWishlist } from "../../Context/wishlistContext";
-import { useCart } from "../../Context/cartContext";
+import { useProduct } from "../../Context/productContext";
+import { useAuth } from "../../Context/authContext";
 
 const Navbar = () =>{
-const { wishState } = useWishlist();
-const { cartState } = useCart();
+const { productState } = useProduct();
+const { token, logoutHandler } = useAuth();
+const { wishlist, cart } = productState;
 return (
 <div className="App">
     <div class="nav-con">
@@ -17,29 +18,27 @@ return (
                 <p class="sm-txt"><i>Everything ends with a dot.</i></p>
             </div>
 
-            <div class="box">
-                <input type="text" placeholder="Search" class="search-box input" />
-            </div>
             <div class="nav-btn">
-                <Link to="/login" className="link-style link-color">
-                <button className="btn secondary-btn">Login</button>
-                </Link>
-                <div class="btn-badge">
-                    <button class="btn icon-only-btn"><i class="far fa-user icon"></i></button>
-                </div>
                 <div class="btn-badge">
                     <Link to="/wishlist" className="link-style">
                     <button class="btn icon-only-btn"><i class="far fa-heart icon"></i></button>
                     </Link>
-                    <div class="real-badge">{wishState.wish.length}</div>
+                    <div class="real-badge">{wishlist.length}</div>
                 </div>
 
                 <div class="btn-badge">
                     <Link to="/cart" className="link-style">
                     <button class="btn icon-only-btn"><i class="far fa-shopping-cart icon"></i></button>
                     </Link>
-                    <div class="real-badge">{cartState.cart.length}</div>
+                    <div class="real-badge">{cart.length}</div>
                 </div>
+                { token ? ( 
+                 <button className="btn icon-only-btn" onClick={()=>logoutHandler()}><i className="fas fa-sign-out-alt icon"></i></button>
+                ) : (
+                    <Link to="/login" className="link-style link-color">
+                        <button className="btn icon-only-btn"><i className="fas fa-sign-in-alt icon"></i></button>
+                    </Link>
+                ) }
             </div>
         </nav>
     </div>

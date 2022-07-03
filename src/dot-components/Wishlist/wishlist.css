@@ -23,21 +23,24 @@
 .complete-card {
     /* max-width: 19rem; */
     background-color: #e9ebf1;
+    position: relative;
 }
 
 .card-image {
-    padding: 0.9375rem;
+    padding: 0.9375rem 0.9375rem 0rem 0.9375rem;
     width: 15.625rem;
     height: 16.875rem;
     align-self: center;
+    /* position: relative; */
 }
 
 .wish-icon {
     color: var(--warning-color);
+    padding: 0px;
 }
 
 .wish-icon:hover {
-    color: var(--alert-color);
+    color: var(--primary-color);
 
 }
 
@@ -47,6 +50,7 @@
 
 .button {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -60,3 +64,14 @@
 .fa-star {
     color: rgb(236, 183, 47);
 }
+
+.like-btn{
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+

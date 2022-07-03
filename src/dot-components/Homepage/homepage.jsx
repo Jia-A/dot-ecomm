@@ -1,22 +1,16 @@
 import "../../public-css/root.css";
 import "./homepage.css";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { useFilter } from "../../Context/filterContext";
 import { Navbar } from "../Navbar/navbar"
 import { Footer } from "../Footer/footer";
+import { useProduct } from "../../Context/productContext";
 
 const Homepage = () => {
-const [categories, setCategories] = useState([]);
 const { filterDispatch } = useFilter();
+const { productState } = useProduct();
+const { categories } = productState;
 
-useEffect(()=>{
-axios.get("/api/categories")
-.then(response =>{
-setCategories(response.data.categories)
-})
-}, [])
 
 return (
 <div className="App">
