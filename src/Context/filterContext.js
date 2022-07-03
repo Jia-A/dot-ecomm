@@ -2,11 +2,7 @@ import {
     createContext,
     useContext,
     useReducer,
-    useState,
-    useEffect
 } from "react";
-
-import axios from "axios";
 
 const initVal = {
     categoryFil: [],
@@ -23,19 +19,12 @@ const FilterContext = createContext();
 const FilterProvider = ({
     children
 }) => {
-    const [products, setProducts] = useState([]);
+
     const [filterState, filterDispatch] = useReducer(filterFunc, initVal);
-    useEffect(() => {
-        axios.get("/api/products")
-            .then(response => {
-                setProducts(response.data.products)
-            })
-    }, []);
     return ( <FilterContext.Provider value = {
             {
                 filterState,
                 filterDispatch,
-                products
             }
         } > {
             children
@@ -57,7 +46,7 @@ const filterFunc = (filterState, action) => {
             return {
                 ...filterState,
                 showProduct: action.payload,
-                    realProduct: action.payload,
+                realProduct: action.payload,
             };
         case "CLEAR_ALL":
             return {
