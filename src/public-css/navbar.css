@@ -32,7 +32,7 @@
     display: inline;
 }
 
-.nav-btn {
+.nav-buttons {
     display: flex;
     flex-direction: row;
 }
@@ -62,4 +62,10 @@
 .btn-badge {
     padding: 0px;
     position: relative;
+}
+
+.nav-btn{
+    font-size: 1.5rem
+        
+    
 }

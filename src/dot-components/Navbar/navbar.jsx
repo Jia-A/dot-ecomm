@@ -21,29 +21,29 @@ return (
                 <p class="sm-txt"><i>Everything ends with a dot.</i></p>
             </div>
 
-            <div class="nav-btn">
+            <div class="nav-buttons">
                 <div class="btn-badge">
                     <Link to="/wishlist" className="link-style">
-                    <button class="btn icon-only-btn"><i class="far fa-heart icon"></i></button>
+                    <button class="btn icon-only-btn nav-btn"><i class="far fa-heart icon"></i></button>
                     </Link>
                     <div class="real-badge">{wishlist.length}</div>
                 </div>
 
                 <div class="btn-badge">
                     <Link to="/cart" className="link-style">
-                    <button class="btn icon-only-btn"><i class="far fa-shopping-cart icon"></i></button>
+                    <button class="btn icon-only-btn nav-btn"><i class="far fa-shopping-cart icon"></i></button>
                     </Link>
                     <div class="real-badge">{cart.length}</div>
                 </div>
                 { theme === "light" ? 
-                (  <button className="btn icon-only-btn" onClick={()=> setTheme("dark")}><i class="fas fa-moon"></i></button> ) : 
-                (  <button className="btn icon-only-btn" onClick={()=> setTheme("light")}><i class="fas fa-sun"></i></button> 
+                (  <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("dark")}><i class="fad fa-moon-cloud icon"></i></button> ) : 
+                (  <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("light")}><i class="fad fa-cloud-sun icon"></i></button> 
                 ) }
                 { token ? ( 
-                 <button className="btn icon-only-btn" onClick={()=>logoutHandler()}><i className="fas fa-sign-out-alt icon"></i></button>
+                 <button className="btn icon-only-btn nav-btn" onClick={()=>logoutHandler()}><i className="fas fa-sign-out-alt icon"></i></button>
                 ) : (
                     <Link to="/login" className="link-style link-color">
-                        <button className="btn icon-only-btn"><i className="fas fa-sign-in-alt icon"></i></button>
+                        <button className="btn icon-only-btn nav-btn"><i className="fas fa-sign-in-alt icon"></i></button>
                     </Link>
                 ) }
                 
