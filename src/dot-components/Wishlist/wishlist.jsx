@@ -20,10 +20,10 @@ return (
             <article class="complete-card">
                 <img src={item.image} alt={item.title} class="card-image" />
                 <span className="like-btn"><i class="fas fa-heart wish-icon" onClick={ ()=> removeFromWishlist(token, item._id)}></i></span>
+                <div className="sub-info rate">{item.ratings}<span><i class="fas fa-star"></i></span></div>
                 <div class="main-info-cont">
                     <h3 class="info-head">{item.title}</h3>
                     <p class="sm-txt">{item.author}</p>
-                    <p className="sub-info">{item.ratings}<span><i class="fas fa-star"></i></span></p>
                     <p class="sub-info">Rs. {item.price}</p>
                 </div>
                 <div class="footer">
