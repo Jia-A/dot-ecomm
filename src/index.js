@@ -5,9 +5,10 @@ import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import { render } from "react-dom";
-import { CartProvider }  from "./Context/cartContext"
-import { WishlistProvider } from "./Context/wishlistContext"
 import { FilterProvider } from "./Context/filterContext";
+import { ProductProvider } from "./Context/productContext";
+import { AuthProvider } from "./Context/authContext";
+import { ThemeProvider } from "./Context/themeContext";
 
 
 // Call make Server
@@ -16,13 +17,15 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <ThemeProvider>
     <FilterProvider>
-      <WishlistProvider>
-        <CartProvider>
+        <ProductProvider>
+          <AuthProvider>
           <App />
-        </CartProvider>
-      </WishlistProvider>
+          </AuthProvider>
+        </ProductProvider>
     </FilterProvider>
+    </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

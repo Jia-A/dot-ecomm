@@ -1,7 +1,7 @@
 .page-container {
     display: flex;
     gap: var(--content-padding);
-    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 .product-container {
@@ -21,6 +21,8 @@
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
     padding: var(--content-padding);
     overflow-y: scroll;
+    background-color: var(--whitesmoke-color);
+    color: var(--primary-color);
 }
 
 .range-cont {
@@ -56,7 +58,7 @@
 }
 
 .card-image {
-    padding: 0.9375rem;
+    padding: 0.9375rem 0.9375rem 0rem 0.9375rem;
     width: 15.625rem;
     height: 16.875rem;
     align-self: center;
@@ -92,4 +94,37 @@
 
 .fa-star {
     color: rgb(236, 183, 47);
+}
+
+.not-wish{
+    color: var(--primary-color);
+}
+
+.not-wish:hover{
+    color: var(--warning-color);
+}
+
+.not-like-btn{
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.sub-info{
+    margin: 0.5rem;
+}
+
+.rate{
+    position: absolute;
+    top: 61.8%;
+    right: 0.4rem;
+    background-color: #e9ebf1;
+    border-radius: 5px;
+    padding: 1px 1px 1px 3px;
+    color: var(--primary-color);
+
 }

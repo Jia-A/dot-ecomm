@@ -1,27 +1,35 @@
+
 .cart-container {
     display: flex;
-    margin-right: 50px;
+    margin:auto;
+    justify-content: center;
+    gap: 5rem; 
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
 }
 
 .cart-cards-container {
-    width: 70%;
     gap: 1.875rem;
     margin-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
 }
 
 .bill {
     display: flex;
-    float: right;
-     width: 30%;
      height: 100%;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
     padding: var(--content-padding);
-    margin-top: 1.875rem;
-    margin-right: 1.25rem;
+    flex-direction: column;
+    background-color: #b8c6d6;
 }
 
 .cart-head {
     font-weight: 500;
+    text-align: center;
+    margin: 1.5rem;
+    color: var(--secondary-color);
 }
 
 .hori-img {
@@ -50,6 +58,10 @@
 .main-info-cont {
     text-align: center;
 
+}
+
+.info-head{
+    margin-top: 0px;
 }
 
 .quantity-cont {
@@ -105,6 +117,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--primary-color);
 }
 
 .price-head,
@@ -115,4 +128,24 @@
 
 .fa-star {
     color: rgb(236, 183, 47);
+}
+
+.span-info{
+    margin-left: 1rem;    
+}
+
+.item-price{
+    margin: 0.5rem;
+}
+
+.wl-btn{
+    margin-top: 5px;
+}
+.cart-rate{
+    position: absolute;
+    top: 56%;
+    right: 0.4rem;
+    background-color: #e9ebf1;
+    border-radius: 5px;
+    padding: 1px 1px 1px 3px;
 }
