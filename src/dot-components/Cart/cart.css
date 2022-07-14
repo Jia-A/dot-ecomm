@@ -1,11 +1,10 @@
-
 .cart-container {
     display: flex;
     margin:auto;
     justify-content: center;
     gap: 5rem; 
     flex-wrap: wrap;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
 }
 
 .cart-cards-container {
@@ -13,7 +12,7 @@
     margin-bottom: 2.5rem;
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    /* width: 70%; */
 }
 
 .bill {
@@ -22,6 +21,7 @@
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
     padding: var(--content-padding);
     flex-direction: column;
+    align-self: auto;
     background-color: #b8c6d6;
 }
 
@@ -29,7 +29,7 @@
     font-weight: 500;
     text-align: center;
     margin: 1.5rem;
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
 }
 
 .hori-img {

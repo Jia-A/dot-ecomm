@@ -77,6 +77,7 @@
 
 .complete-card {
     max-width: 40rem;
+    width: max-content;
     background-color: #E1F0C4;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
 }
@@ -88,4 +89,19 @@
 
 .complete-card {
     padding-bottom: 0px;
+}
+
+@media screen and ( max-width:515px) {
+    .responsive-img{
+        height: 22rem;
+    }
+    .authors{
+        margin-top: 1rem;
+    }
+}
+@media screen and ( max-width:350px) {
+    .responsive-img{
+        height: 16rem;
+    }
+
 }

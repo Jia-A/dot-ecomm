@@ -4,9 +4,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Filter } from "../Filter/filter";
 import { useFilter } from "../../Context/filterContext";
-import { Navbar } from "../Navbar/navbar";
+// import { Navbar } from "../Navbar/navbar";
 import { useAuth } from "../../Context/authContext";
 import { useProduct } from "../../Context/productContext";
+import { NavbarResp } from "../Navbar/navbarResponsive";
 
 
 const Products = () => {
@@ -84,9 +85,12 @@ return showProduct.filter(
     };
     return (
     <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
+        <NavbarResp/>
         <div class="page-container">
+            <div className="fil-box">
             <Filter />
+            </div>
             <div class="product-container flex-prop">
                 <h2 class="product-head">Showing All Products</h2>
                 <div class="product-cards-container">

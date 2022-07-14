@@ -24,7 +24,7 @@ return (
             
             {cart.map((item) =>
             <article class="complete-card">
-            <img src={item.image} alt="" class="card-image" />
+            <img src={item.image} alt="product-image" class="card-image" />
             {wishlist.find((wishProduct) => wishProduct.id===item.id) ?                           
                             <span className="like-btn"><i class="fas fa-heart wish-icon" onClick={ ()=> removeFromWishlist(token, item._id)}></i></span>
                              : <span className="not-like-btn"><i class="far fa-heart not-wish" onClick={ ()=>
