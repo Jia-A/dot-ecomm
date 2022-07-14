@@ -36,7 +36,7 @@ const Filter = () => {
                     })}/>
                     Rom-com
                 </label>
-                <label for="fanstasy">
+                <label for="fantasy">
                     <input type="radio" id="fantasy" name="category" checked = {filterState.categoryFil === "Fantasy"}
                     onClick={()=>filterDispatch({
                         type : "CATEGORIES", payload : "Fantasy"
@@ -70,7 +70,7 @@ const Filter = () => {
                     <input type="radio" id="4star" name="rating" value={filterState.ratingFil === "4"} onClick ={()=> filterDispatch({type : "RATING", payload : 4})}/>
                     4 star 
                 </label>
-                <label for="4star">
+                <label for="5star">
                     <input type="radio" id="5star" name="rating" value={filterState.ratingFil === "5"} onClick ={()=> filterDispatch({type : "RATING", payload : 5})}/>
                     5 star 
                 </label>
