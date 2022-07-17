@@ -12,8 +12,8 @@ const [loginDetails, setLoginDetails] = useState({email : "", password : ""});
 const guestUserHandler = (event) => {
 event.preventDefault();
 setLoginDetails({
-email: "adarshbalika@gmail.com",
-password: "adarshbalika",
+email: "billiejean2011@gmail.com",
+password: "smoothcriminal",
 })
 }
 
@@ -33,13 +33,13 @@ return (
                 <h2 class="form-head">Login Form</h2>
                 <fieldset>
                     <legend for="email" className="label-inp">Email address*</legend>
-                    <input type="text" className="input" id="email" placeholder="billiejean@gmail.com"
+                    <input type="text" className="input" id="email" placeholder="billiejean2011@gmail.com"
                         value={loginDetails.email} onChange={(e)=>setLoginDetails({...loginDetails, email :
                     e.target.value})} required />
                 </fieldset>
                 <fieldset>
                     <legend for="password" className="label-inp">Password*</legend>
-                    <input type="password" className="input" id="password" placeholder="1234567"
+                    <input type="password" className="input" id="password" placeholder="**************"
                         value={loginDetails.password} onChange={(e)=>setLoginDetails({...loginDetails, password :
                     e.target.value})} required />
                 </fieldset>
