@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 const Wishlist =() => {
 const { token } = useAuth();
 
-const { productState, productDispatch, getCart, removeFromWishlist} = useProduct();
+const { productState, getCart, removeFromWishlist} = useProduct();
 const { cart, wishlist } = productState;
 return (
 <div className="App">
@@ -19,7 +19,8 @@ return (
             {wishlist.map((item) =>
             <article class="complete-card">
                 <img src={item.image} alt={item.title} class="card-image" />
-                <span className="like-btn"><i class="fas fa-heart wish-icon" onClick={ ()=> removeFromWishlist(token, item._id)}></i></span>
+                <span className="like-btn"><i class="fas fa-heart wish-icon" onClick={ ()=> removeFromWishlist(token,
+                        item._id)}></i></span>
                 <div className="sub-info rate">{item.ratings}<span><i class="fas fa-star"></i></span></div>
                 <div class="main-info-cont">
                     <h3 class="info-head">{item.title}</h3>
@@ -29,10 +30,10 @@ return (
                 <div class="footer">
                     {cart.find((product) => product._id===item._id) ?
                     (
-                        <Link to="/cart">
-                        <button class="btn primary-btn" >Go to cart</button>
-                        </Link> )
-                    
+                    <Link to="/cart">
+                    <button class="btn primary-btn">Go to cart</button>
+                    </Link> )
+
                     :
                     <button class="btn primary-btn" onClick={ ()=> getCart(token, item)}>Move to cart</button> }
                 </div>

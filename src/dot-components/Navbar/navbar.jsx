@@ -35,18 +35,21 @@ return (
                     </Link>
                     <div class="real-badge">{cart.length}</div>
                 </div>
-                { theme === "light" ? 
-                (  <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("dark")}><i class="fad fa-moon-cloud icon"></i></button> ) : 
-                (  <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("light")}><i class="fad fa-cloud-sun icon"></i></button> 
+                { theme === "light" ?
+                ( <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("dark")}><i
+                        class="fad fa-moon-cloud icon"></i></button> ) :
+                ( <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("light")}><i
+                        class="fad fa-cloud-sun icon"></i></button>
                 ) }
-                { token ? ( 
-                 <button className="btn icon-only-btn nav-btn" onClick={()=>logoutHandler()}><i className="fas fa-sign-out-alt icon"></i></button>
+                { token ? (
+                <button className="btn icon-only-btn nav-btn" onClick={()=>logoutHandler()}><i
+                        className="fas fa-sign-out-alt icon"></i></button>
                 ) : (
-                    <Link to="/login" className="link-style link-color">
-                        <button className="btn icon-only-btn nav-btn"><i className="fas fa-sign-in-alt icon"></i></button>
-                    </Link>
+                <Link to="/login" className="link-style link-color">
+                <button className="btn icon-only-btn nav-btn"><i className="fas fa-sign-in-alt icon"></i></button>
+                </Link>
                 ) }
-                
+
             </div>
         </nav>
     </div>

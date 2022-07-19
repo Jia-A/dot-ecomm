@@ -1,4 +1,3 @@
-
 .body-container {
     display: flex;
     flex-direction: column;
@@ -91,16 +90,18 @@
     padding-bottom: 0px;
 }
 
-@media screen and ( max-width:515px) {
-    .responsive-img{
+@media screen and (max-width:515px) {
+    .responsive-img {
         height: 22rem;
     }
-    .authors{
+
+    .authors {
         margin-top: 1rem;
     }
 }
-@media screen and ( max-width:350px) {
-    .responsive-img{
+
+@media screen and (max-width:350px) {
+    .responsive-img {
         height: 16rem;
     }
 

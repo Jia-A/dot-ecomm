@@ -4,9 +4,11 @@
     align-items: center;
     justify-content: center;
 }
-.sign{
+
+.sign {
     margin-top: 2%;
 }
+
 .form-container {
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
     align-self: center;
@@ -18,9 +20,11 @@
     text-align: center;
 
 }
-.signup-form{
+
+.signup-form {
     color: #a0b2b9;
 }
+
 .form-head {
     font-weight: 500;
     color: var(--primary-color);
@@ -37,11 +41,12 @@
     font-family: "Montserrat", sans-serif;
     border: none;
     font-size: 1rem;
-    padding-top: 5px ;
+    padding-top: 5px;
     cursor: pointer;
 
 }
-.new-ac:hover{
+
+.new-ac:hover {
     color: #24292c;
     text-decoration: 1px solid #24292c underline;
 }
@@ -92,7 +97,7 @@
     color: #a0b2b9;
 }
 
-.new-btn{
+.new-btn {
     border: none;
     border-radius: 5px;
     font-family: "Montserrat", sans-serif;
@@ -100,15 +105,17 @@
     margin: 3px;
     padding: 10px;
     font-weight: 500;
-    text-decoration:  1px solid #24292c underline;
+    text-decoration: 1px solid #24292c underline;
 }
-fieldset{
+
+fieldset {
     border: 1px solid #a0b2b9;
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
 }
-.input{
+
+.input {
     padding: 5px;
     width: 250px;
     background-color: transparent;
@@ -116,10 +123,12 @@ fieldset{
     color: var(--primary-color);
     font-weight: 600;
 }
-.input:focus{
+
+.input:focus {
     outline: none;
 }
-.forgot-pass{
+
+.forgot-pass {
     background-color: transparent;
     border: none;
     font-size: 1rem;
@@ -127,41 +136,47 @@ fieldset{
     color: var(--primary-color);
     cursor: pointer;
 }
-.login-btn{
-    width : 80%;
-    margin:5px;
+
+.login-btn {
+    width: 80%;
+    margin: 5px;
     padding: 5px;
     cursor: pointer;
-    background-color:  var(--secondary-color);
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 5px;
     color: var(--primary-color);
     font-size: 1.1rem;
 }
-.login-btn:hover{
+
+.login-btn:hover {
     background-color: var(--primary-color);
-    color:var(--secondary-color);
+    color: var(--secondary-color);
     border-bottom: 2px solid #a0b2b9;
 }
-.remem-me{
+
+.remem-me {
     color: var(--primary-color);
 }
-.btn-div{
+
+.btn-div {
     text-align: center;
 }
-.new-ac-btn{
-    width : 80%;
-    margin:5px;
+
+.new-ac-btn {
+    width: 80%;
+    margin: 5px;
     padding: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     background-color: var(--primary-color);
-    color:var(--secondary-color);
+    color: var(--secondary-color);
 }
-.new-ac-btn:hover{
+
+.new-ac-btn:hover {
     color: var(--primary-color);
-    background-color:  var(--secondary-color);
+    background-color: var(--secondary-color);
     border-bottom: 2px solid var(--primary-color);
 }

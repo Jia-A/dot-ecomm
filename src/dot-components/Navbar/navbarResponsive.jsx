@@ -11,7 +11,7 @@ const NavbarResp = () =>{
 const { productState } = useProduct();
 const { token, logoutHandler } = useAuth();
 const { theme, setTheme } = useTheme();
-const [ filterShow, setFilterShow ] =  useState(false);
+const [ filterShow, setFilterShow ] = useState(false);
 
 const { wishlist, cart } = productState;
 return (
@@ -40,32 +40,37 @@ return (
                     <div class="real-badge">{cart.length}</div>
                 </div>
                 { filterShow ?
-                 (
-                    <button className="btn icon-only-btn nav-btn filter-hide" onClick={()=> setFilterShow(false)}><i className="far fa-sort icon"></i></button>
+                (
+                <button className="btn icon-only-btn nav-btn filter-hide" onClick={()=> setFilterShow(false)}><i
+                        className="far fa-sort icon"></i></button>
                 ) : (
-                    <button className="btn icon-only-btn nav-btn filter-hide" onClick={()=> setFilterShow(true)}><i className="far fa-filter icon"></i></button>
+                <button className="btn icon-only-btn nav-btn filter-hide" onClick={()=> setFilterShow(true)}><i
+                        className="far fa-filter icon"></i></button>
                 )
                 }
-                
-                { theme === "light" ? 
-                (  <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("dark")}><i class="fad fa-moon-cloud icon"></i></button> ) : 
-                (  <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("light")}><i class="fad fa-cloud-sun icon"></i></button> 
+
+                { theme === "light" ?
+                ( <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("dark")}><i
+                        class="fad fa-moon-cloud icon"></i></button> ) :
+                ( <button className="btn icon-only-btn nav-btn" onClick={()=> setTheme("light")}><i
+                        class="fad fa-cloud-sun icon"></i></button>
                 ) }
-                { token ? ( 
-                 <button className="btn icon-only-btn nav-btn" onClick={()=>logoutHandler()}><i className="fas fa-sign-out-alt icon"></i></button>
+                { token ? (
+                <button className="btn icon-only-btn nav-btn" onClick={()=>logoutHandler()}><i
+                        className="fas fa-sign-out-alt icon"></i></button>
                 ) : (
-                    <Link to="/login" className="link-style link-color">
-                        <button className="btn icon-only-btn nav-btn"><i className="fas fa-sign-in-alt icon"></i></button>
-                    </Link>
+                <Link to="/login" className="link-style link-color">
+                <button className="btn icon-only-btn nav-btn"><i className="fas fa-sign-in-alt icon"></i></button>
+                </Link>
                 ) }
-                
+
             </div>
         </nav>
     </div>
-    {filterShow && 
+    {filterShow &&
     <div className="filter-container">
-        <Filter/>
-    </div>        
+        <Filter />
+    </div>
     }
 </div>
 );

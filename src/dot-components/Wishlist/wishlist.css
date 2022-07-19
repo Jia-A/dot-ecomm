@@ -22,7 +22,6 @@
 }
 
 .complete-card {
-    /* max-width: 19rem; */
     background-color: #e9ebf1;
     position: relative;
 }
@@ -32,7 +31,6 @@
     width: 15.625rem;
     height: 16.875rem;
     align-self: center;
-    /* position: relative; */
 }
 
 .wish-icon {
@@ -66,7 +64,7 @@
     color: rgb(236, 183, 47);
 }
 
-.like-btn{
+.like-btn {
     border-radius: 5px;
     padding: 5px;
     position: absolute;
@@ -75,4 +73,3 @@
     font-size: 1.5rem;
     cursor: pointer;
 }
-

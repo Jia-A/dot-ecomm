@@ -22,14 +22,13 @@ const FilterProvider = ({
 
     const [filterState, filterDispatch] = useReducer(filterFunc, initVal);
     return ( <FilterContext.Provider value = {
-            {
-                filterState,
-                filterDispatch,
-            }
-        } > {
-            children
-        } </FilterContext.Provider>
-    );
+        {
+            filterState,
+            filterDispatch,
+        }
+    } > {
+        children
+    } </FilterContext.Provider>);
 }
 
 const useFilter = () => useContext(FilterContext);
@@ -46,7 +45,7 @@ const filterFunc = (filterState, action) => {
             return {
                 ...filterState,
                 showProduct: action.payload,
-                realProduct: action.payload,
+                    realProduct: action.payload,
             };
         case "CLEAR_ALL":
             return {
